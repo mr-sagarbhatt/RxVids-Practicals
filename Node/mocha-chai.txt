@@ -1,0 +1,33 @@
+Modules:
+    npm i -D mocha chai chai-http
+------------------------------------------------------------------------
+
+Mocha: (https://mochajs.org/#installation)
+    ->Mocha is javascript test framework for node.js programs, featuring browser support, asynchronous testing, and test coverage reports.
+
+Mocha Hooks:
+    ->describe: Defines a block of test cases. :: describe(comment, callback)
+    ->it: Defines a single test case. :: it(comment, callback)
+    ->before: Run only once before the first test in the describe block.
+    ->after: Run only once after the last test in the describe block.
+    ->beforeEach: Runs before every test in the describe block.
+    ->afterEach: Runs after every test in the describe block.
+
+    ->ex:
+      describe("GET /service", () => {
+        it("should return all services :: async-await", async () => {
+            const response = await chai.request(server).get("/service");
+            expect(response.status).to.equal(200);
+            expect(response.body).to.be.an("array");
+        });
+      });
+------------------------------------------------------------------------
+
+Chai: (https://www.chaijs.com/guide/styles/)
+    ->Chai is a BDD/TDD assertion library for node.js and the browser that can be delightfully paired with any javascript testing framework.
+
+    * Assertion styles:
+        BDD: should, except :: (https://www.chaijs.com/api/bdd/)
+            ->Behavior Driven Development is a software development method that uses a series of steps to describe a problem and then tests the behavior of the software to verify that the behavior conforms to the description.
+        TDD: assert
+            ->Test Driven Development is a software development method that uses a series of tests to verify the behavior of a program.

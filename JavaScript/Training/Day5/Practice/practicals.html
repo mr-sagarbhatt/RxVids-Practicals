@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical Day 5</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container font-monospace pt-1">
+      <div class="accordion" id="accordionBasic">
+        <div class="accordion-item">
+          <div class="accordion-header fs-5" id="headingOne">
+            <button
+              class="accordion-button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Practical: 1 Using Function Expression, find the area of circle.
+            </button>
+          </div>
+          <div
+            class="accordion-collapse collapse show"
+            id="collapseOne"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionBasic"
+          >
+            <div class="accordion-body bg-light fs-5 text-dark">
+              <form>
+                <div class="row mb-3">
+                  <div class="col-auto">
+                    <label class="form-label" for="txtRadius">
+                      Please Enter Radius:
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="txtRadius"
+                      id="txtRadius"
+                      placeholder="Enter radius here"
+                    />
+                    <div id="validateRadius" class="invalid-feedback">
+                      Please enter number.
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div id="areaOfCircle" class="col-auto"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header fs-5" id="headingTwo">
+            <button
+              class="accordion-button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="true"
+              aria-controls="collapseTwo"
+            >
+              Practical: 2 Using Function Constructor, find the area of
+              rectangle. <br />
+              Practical: 3 Explain usage of Function Hosing using example.
+            </button>
+          </div>
+          <div
+            class="accordion-collapse collapse show"
+            id="collapseTwo"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionBasic"
+          >
+            <div class="accordion-body bg-light fs-5 text-dark">
+              <form>
+                <div class="row mb-3">
+                  <div class="col-auto">
+                    <label class="form-label" for="txtLength">
+                      Please Enter Length:
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="txtLength"
+                      id="txtLength"
+                      placeholder="Enter length here"
+                    />
+                    <div id="validateLength" class="invalid-feedback">
+                      Please enter number.
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-auto">
+                    <label class="form-label" for="txtWidth">
+                      Please Enter Width:
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="txtWidth"
+                      id="txtWidth"
+                      placeholder="Enter width here"
+                    />
+                    <div id="validateWidth" class="invalid-feedback">
+                      Please enter number.
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div id="areaOfRect" class="col-auto"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/practicals.js"></script>
+  </body>
+</html>

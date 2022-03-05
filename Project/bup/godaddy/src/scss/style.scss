@@ -1,0 +1,20 @@
+// * IMPORT THE CUSTOM BOOTSTRAP
+@use "custom";
+
+// * IMPORT THE COMPONENTS
+@use "components/animations";
+@use "components/buttons";
+@use "components/mixins";
+@use "components/typography";
+
+// * IMPORT THE SECTIONS
+@use "sections/faq-section";
+@use "sections/feaure-content";
+@use "sections/footer";
+@use "sections/guides-section";
+@use "sections/header";
+@use "sections/product-grid";
+@use "sections/promotion-ad";
+@use "sections/search";
+@use "sections/feature-content.scss";
+@use "sections/text-banner.scss";

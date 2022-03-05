@@ -1,0 +1,44 @@
+CSS:
+Types:Inline, Internal and External (IF element has applied all 3 types then first prefeernce is inline)
+Inline(page level): style="property:value"
+Internal: <style>selectore{property:value}</style>
+To link CSS file in HTML(External .css file):
+    <link href="filename.css" rel="stylesheet">
+
+Selector(HTML Element) and Declaration(Style for selector):
+(https://www.w3schools.com/cssref/css_selectors.asp)
+(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)
+    selector                    Declaration
+    Element, #id, .class       {property:value}
+    EX: * {color: blue} -- * is universal selector which is applied on all HTML elements
+
+    Basic selectors:
+        Universal selector: Syntax: *, Example: *{}
+        Type selector:  Syntax: elementname Example: p{}
+        Class selector:  Syntax: .classname Example: .index
+            .class1.class2	EX:.name1.name2	Selects all elements with both name1 and name2 set within its class attribute
+            .class1 .class2	EX:.name1 .name2	Selects all elements with name2 that is a descendant of an element with name1
+        id selector: Syntax: #idname Example: #toc
+        Attribute selector: Syntax: [attr] EX:[target]	Selects all elements with a target attribute
+            , [attr=value] EX:[target=_blank]	Selects all elements with target="_blank"
+            , [attr~=value] EX:[title~=flower]	Selects all elements with a title attribute containing the word "flower"
+            , [attr|=value] EX:[lang|=en]	Selects all elements with a lang attribute value equal to "en" or starting with "en-"
+            , [attr^=value] EX:a[href^="https"]	Selects every <a> element whose href attribute value begins with "https"
+            , [attr$=value] EX:a[href$=".pdf"]	Selects every <a> element whose href attribute value ends with ".pdf"
+            , [attr*=value] EX:a[href*="w3schools"]	Selects every <a> element whose href attribute value contains the substring "w3schools"
+    Grouping selectors:
+        Selector list: , EX: p, div
+    Combinators:
+        Descendant combinator: (space)
+            Syntax:element element	EX:div p	Selects all <p> elements inside <div> elements (all-child as well as sub child)
+        Child combinator: (>)
+            Syntax:element>element	EX:div > p	Selects all <p> elements where the parent is a <div> element (only direct child not sub child)
+        General sibling combinator: (~)
+            Syntax:element1~element2	EX:p ~ ul	Selects every <ul> element that is preceded by a <p> element
+        Adjacent sibling combinator: (+)
+            Syntax:element+element	EX:div + p	Selects the first <p> element that is placed immediately after <div> elements
+    Pseudo:
+        Pseudo classes: (https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+            The : pseudo allow the selection of elements based on state information that is not contained in the document tree. Example: a:visited will match all <a> elements that have been visited by the user.
+        Pseudo elements: (https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+            The :: pseudo represent entities that are not included in HTML. Example: p::first-line will match the first line of all <p> elements.

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML 5</title>
+    <style>
+      [type="range"]::before {
+        content: attr(min);
+      }
+      [type="range"]::after {
+        content: attr(max);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- * hgroup -->
+    <hgroup>
+      <!-- * header -->
+      <header>
+        <h1>RadixWeb</h1>
+        <h2>Web Development</h2>
+      </header>
+    </hgroup>
+
+    <!-- * article -->
+    <article>
+      <h1>Programming Languages</h1>
+      <!-- * section -->
+      <section>
+        <!-- * mark -->
+        <h2><mark>NodeJS</mark></h2>
+        <!-- * time -->
+        <time datetime="2021-09-14T09:10+05:30">
+          9:10 am on September 14, 2021
+        </time>
+        <!-- * address -->
+        <address>
+          Sagar Bhatt<br />
+          @Sagar Bhatt<br />
+          bhattsagar112@gamil.com
+        </address>
+      </section>
+      <section>
+        <!-- * dl: description list -->
+        <p>Cryptids of Cornwall:</p>
+        <dl>
+          <dt>Beast of Bodmin</dt>
+          <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+          <dt>Morgawr</dt>
+          <dd>A sea serpent.</dd>
+
+          <dt>Owlman</dt>
+          <dd>A giant owl-like creature.</dd>
+        </dl>
+        <!-- * em, i -->
+        <em>Name</em>: <i>Sagar</i>
+        <hr />
+        <!-- * ol -->
+        <ol start="9" reversed>
+          <li>1</li>
+          <li>2</li>
+        </ol>
+        <!-- * s: strike -->
+        <s>Strike</s>
+        <!-- * strong, b, u -->
+        <u><strong>Strong: Importance</strong> <b>Bold</b></u>
+      </section>
+    </article>
+    <!-- * footer -->
+    <footer>&copy; Radixweb</footer>
+    <br />
+    <br />
+    <form id="my-form">
+      <!-- TODO: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date -->
+      <!-- label is used for wider click area -->
+      <label for="date-input" form="my-form"
+        >Please choose a date and time:</label
+      >
+      <input
+        type="date"
+        name="date"
+        id="date-input"
+        value="1998-02-11"
+        min="1998-01-01"
+        max="2021-12-31"
+        required
+      />
+      <input
+        type="datetime-local"
+        name="datetime"
+        id="datetime-input"
+        value="2018-06-12T19:30"
+        min="2018-06-07T00:00"
+        max="2018-06-14T00:00"
+      />
+      <input
+        type="time"
+        name="time"
+        id="time-input"
+        value="21:00"
+        min="09:00"
+        max="18:00"
+      />
+      <br />
+      <label for="month-input">Please choose a month and week:</label>
+      <input
+        type="month"
+        name="month"
+        id="month-input"
+        min="2018-03"
+        max="2021-09"
+        value="2018-05"
+      />
+      <input
+        type="week"
+        name="week"
+        id="week-input"
+        min="2018-W18"
+        max="2018-W26"
+        value="2021-W05"
+      /><br />
+      <label for="range-input">Ratings</label>
+      <input
+        type="range"
+        name="range"
+        id="range-input"
+        min="1"
+        max="5"
+        value="1"
+        step="any"
+      /><br />
+      <label for="search-data">Search Here:</label>
+      <input
+        type="search"
+        name="search"
+        id="search-data"
+        placeholder="Enter Search Term"
+      /><br />
+      <label for="tel-data">Telephone Number:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        required
+      />
+      <small>Format: 123-4567890</small>
+    </form>
+  </body>
+</html>

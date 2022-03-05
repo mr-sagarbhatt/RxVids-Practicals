@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Day 1</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container font-monospace pt-1">
+      <div class="accordion" id="accordionBasic">
+        <div class="accordion-item">
+          <div class="accordion-header fs-5" id="headingOne">
+            <button
+              class="accordion-button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Assignment: 1 Create an application for performing basic math
+              operations like Addition, Subtraction, Multiplication and
+              Division.
+            </button>
+          </div>
+          <div
+            class="accordion-collapse collapse show"
+            id="collapseOne"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionBasic"
+          >
+            <div class="accordion-body bg-light fs-5 text-dark">
+              <form>
+                <div class="row mb-3">
+                  <div class="col-auto">
+                    <label class="form-label" for="txtFirstNo">
+                      Please Enter First Number:
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="txtFirstNo"
+                      id="txtFirstNo"
+                    />
+                    <div id="validateNo1" class="invalid-feedback">
+                      Please enter number.
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-auto">
+                    <label class="form-label" for="txtSecondNo">
+                      Please Enter Second Number:
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="txtSecondNo"
+                      id="txtSecondNo"
+                    />
+                    <div id="validateNo2" class="invalid-feedback">
+                      Please enter number.
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-auto">
+                    <fieldset>
+                      <legend>
+                        Please select operation you want to perform:
+                      </legend>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="radio"
+                          id="addition"
+                          value="1"
+                        />
+                        <label class="form-check-label" for="addition">
+                          Addition
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="radio"
+                          id="subtraction"
+                          value="2"
+                        />
+                        <label class="form-check-label" for="subtraction">
+                          Subtraction
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="radio"
+                          id="multiplication"
+                          value="3"
+                        />
+                        <label class="form-check-label" for="multiplication">
+                          Multiplication
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="radio"
+                          id="division"
+                          value="4"
+                        />
+                        <label class="form-check-label" for="division"
+                          >Division</label
+                        >
+                      </div>
+                    </fieldset>
+                    <div id="validateRadio" class="invalid-feedback">
+                      Please choose an option.
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-auto">
+                    <input
+                      id="btnCalculate"
+                      class="btn btn-dark bg-secondary"
+                      type="button"
+                      value="Calculate"
+                    />
+                    <input
+                      id="btnReset"
+                      class="btn btn-warning bg-warning bg-opacity-50"
+                      type="button"
+                      value="Reset"
+                    />
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div id="result" class="col-auto"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/assignment.js"></script>
+  </body>
+</html>

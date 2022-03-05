@@ -1,0 +1,45 @@
+HTML 5:
+2:
+Semantic Markup: Indicates html has syntactic meaning as well as semantic context meaning
+
+    <!DOCTYPE html>: html 5 document
+
+Structural Elements: Layout of the page
+    <header>: First element on page, Defines header of web page, can be in sections as well
+    <hgroup>: Fat header?Use <hgroup>, Use to indicate relationship when web page have Header and subheader
+    <footer>: Nearest ancestor sectioning content, More than one per page, Contains: Info about the section, Who wrote it, Copyright
+    <article>: Self-contained document, page, blog post etc, could be independently distributed
+                Forum post, Blog post, Article, Individual email, Comments.
+    <section>: Used in 2 ways: Sections page into subject areas, Sections an article
+                section vs article: Section does not create as an stan alone document
+    <aside>: Sidebars
+    <nav>: Used to mark navigation sections
+            Use for major navigation links
+
+Additional Elements:
+    Mark: Used to highlight section of text
+            Used to mark user's current activity
+    Time: Used to demark time
+            Used to provide date/time in universal format
+
+Changed Elements:
+    <address>: For the contact details of the author not for postal addresses
+            Now multiple in on document-one for each <article>, Can be email, postal or any other address
+    <cite>: Technically, no longer used to mark up a name of a speaker
+    <dl>: Now expended to cover any name/value groups
+    <em>: Use when you are changing the meaning of the statement
+    <i>: For italic fonts, Use when you want a technical term, a ship name, a thought etc.
+    <hr>: horizontal rule
+    <ol>: Ordered list
+    <s>: Used to indicate a strike through
+        Used to indicate content that is no longer accurate or relevant
+    <small>: Now used for "small print" as in legal documents
+    <strong>: Indicates importance
+    <b>: Indicates bold without indicating importance
+    <u>: underline
+
+3:
+Forms:
+    HTML5 New input types: Date, Time, Month, Week, Range, Search, tel (for telephone), Email, color
+    Related Type: Data List
+    New Displays: Progress and Meter

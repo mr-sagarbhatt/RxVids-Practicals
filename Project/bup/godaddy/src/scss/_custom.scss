@@ -1,0 +1,43 @@
+@use "./components/mixins" as *;
+
+// scss-docs-start gray-color-variables
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+// scss-docs-end gray-color-variables
+
+// * OVERRIDE BOOTSTRAP VARIABLES
+$nav-link-padding-y: 0;
+$nav-link-padding-x: 0;
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+$navbar-toggler-padding-x: 0;
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-font-size: 2rem;
+
+@font-face {
+  font-family: gdSherpa;
+  src: url(../fonts/gdsherpa-vf.woff2);
+}
+@font-face {
+  font-family: gdSherpa;
+  src: url(../fonts/gd-sage-bold.woff2);
+  font-weight: bold;
+}
+
+:root {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "gdSherpa", Arial, sans-serif;
+}
+
+// * IMPORT BOOTSTRAP 5
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

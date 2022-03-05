@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <style>
+      /* * Universal selector */
+      * {
+        background-color: white;
+      }
+      /* * Type/Tag selector */
+      h5 {
+        color: blue;
+      }
+      /* * id selector */
+      #h5 {
+        color: antiquewhite;
+      }
+      /* * class selector */
+      .h5 {
+        color: aqua;
+      }
+      /* * Grouping selectors: Selector list */
+      h5,
+      #h5,
+      .h5 {
+        display: inline;
+      }
+      /* * Attribute selector */
+      /* attribute type */
+      [type],
+      /* attribute type has value submit */
+      [type="submit"], /* or [type="submit"] */
+      /* attribute href has value starts with https */
+      [href^="https"],
+      /* attribute href has value ends with com */
+      [href$="com"],
+      /* attribute class contain word span1*/
+      [class~="span1"] ,
+      /* attribute class contain substring span*/
+      [class*="span"] {
+        color: blueviolet;
+        text-decoration: none;
+      }
+      /* * select all element with both classes */
+      .span1.span2{
+        opacity: 0.2;;
+      }
+      /* * select all element with class p which is inside of element which has class span2  */
+      .span2 .p{
+        background-color: black;
+      }
+      /* * all div inside div  */
+      div div{
+        color: blue;
+      }
+      /* * child div inside div */
+      div > p{
+        color:red
+      }
+      /* * all a which is siblings of h5 */
+      h5 ~ a{
+        margin: 100px;
+      }
+      /* every first div which placed after h5 */
+      h5 + div{
+        margin: 100px;;
+      }
+    </style>
+  </head>
+  <body>
+    <h5>h5 tag</h5>
+    <h5 id="h5">h5 id</h5>
+    <h5 class="h5">h5 class</h5>
+
+    <div class="span1 span2">
+      <p class="p">p tag</p>
+      <div>div tag</div>
+      <p>p tag</p>
+    </div>
+    <input type="button" value="Button" />
+    <input type="submit" value="Submit" />
+    <a href="https://www.google.com" target="_blank">Google.com</a>
+    <span id="span" class="span1">Span Tag</span>
+    <div>
+      <p>
+        <div>Div tag</div>
+        <p>P tag</p>
+      </p>
+      <div>
+        <div>Div tag</div>
+        <p>P tag</p>
+      </div>
+    </div>
+
+  </body>
+</html>

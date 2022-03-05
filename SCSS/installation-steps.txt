@@ -1,0 +1,33 @@
+-Generate package.json (hold all dependencies)
+	->npm init
+		license: MIT
+
+-Install packages:
+Dependencies:
+	(npm install packageName@version)
+	(--save: flag will save everything in package.json)
+	(^)
+	->npm install bootstrap font-awesome jquery popper.js --save
+
+Dev Dependencies (needed for development only):
+	(gulp: task runner- compile scss, move files, run server)
+	(gulp-sass: sass compiler)
+	(browser-sync: server)
+	(--save-dev: flag will save everything in package.json as dev dependencies)
+	->npm install gulp gulp-sass browser-sync --save-dev
+
+	(gulp cli: gulp command line)
+	(-g: flag install dependency globally)
+	->npm install -g gulp-cli
+
+src->
+	scss->style.scss
+
+command to run gulp:
+	->gulp
+	or add it to package.json-> scripts:
+		"scripts": {
+			"start": "gulp"
+		},
+		and run command:
+			-> npm start

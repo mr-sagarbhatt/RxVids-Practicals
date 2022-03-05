@@ -1,0 +1,58 @@
+30-11-2021
+
+server side rendering
+progressive web apps
+virual dom
+versions (major, minor, built)
+Components
+
+--------------------------------------------------
+cli
+	npm i -g @angular/cli
+		ng new projectname
+		npm start
+		create component(generate html, css, ts): ng generate component componentname
+
+	npm i -g @vue/cli
+		vue create projectname
+		npm run serve
+	
+	npm i -g react-cli react
+		npx create-react-app projectname
+		npm start
+
+-------------------------------------------------------
+(React)
+-------------------------------------------------------
+1-12-2021
+
+data binding
+	Interpolation: One-way binding - {}
+	Two way binding 
+Conditional Construct: Can use if condition
+Iterationg Object
+
+-------------------------------------------------------
+3-12-2021
+
+Passing values from child to parent component
+	props - parentCallBack()
+
+-------------------------------------------------------
+6-12-2021
+	Controlled Forms(state)
+	UnControlled Forms(ref)
+
+-------------------------------------------------------
+8-12-2021
+
+Routing:
+	npm i react-router-dom
+
+-------------------------------------------------------
+15-12-2021
+
+AuthGuard:
+	npm i reacy-router-guards
+Fragments: (React.Fragement or <> html elements </>) :: container, jsx return only one element so it wraps multiple elements
+Services:
