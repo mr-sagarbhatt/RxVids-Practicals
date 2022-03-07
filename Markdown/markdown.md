@@ -1,8 +1,8 @@
 > # Markdown Files
 >
-> > A text file created with several syntaxes of a Markdown language is called a Markdown File. It makes use of plain text formatting consisting of inline text symbols for specifying how a text can be formatted.
-> > \
-> > &nbsp;
+> A text file created with several syntaxes of a Markdown language is called a Markdown File. It makes use of plain text formatting consisting of inline text symbols for specifying how a text can be formatted.
+> \
+> &nbsp;
 
 # Headings
 
