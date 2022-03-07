@@ -121,3 +121,7 @@ function add(a, b) {
 |   1 | sagar |
 |   2 | Niraj |
 |   3 | Harsh |
+
+# Image
+
+![markdown image](./download.jpeg)
