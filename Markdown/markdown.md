@@ -102,6 +102,12 @@ function add(a, b) {
 }
 ```
 
+# Bash
+
+```bash
+npm install
+```
+
 # Horizontal Line
 
 ---
@@ -125,3 +131,9 @@ function add(a, b) {
 # Image
 
 ![markdown image](./download.jpeg)
+
+# Task Lists
+
+- [x] Task 1
+- [x] Task 2
+- [ ] Task 3
