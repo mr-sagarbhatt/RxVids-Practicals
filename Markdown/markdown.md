@@ -1,6 +1,11 @@
-> # Markdown Files
+<samp>
+
+> # Markdown Files :: [markdown](https://www.markdownguide.org/getting-started/#:~:text=Markdown%20can%20be%20used%20for,opened%20using%20virtually%20any%20application.)
 >
-> A text file created with several syntaxes of a Markdown language is called a Markdown File. It makes use of plain text formatting consisting of inline text symbols for specifying how a text can be formatted.
+> Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by John Gruber in 2004, Markdown is now one of the world’s most popular markup languages.\
+> Markdown can be used for everything. People use it to create websites, documents, notes, books, presentations, email messages, and technical documentation.\
+> Markdown is portable. Files containing Markdown-formatted text can be opened using virtually any application.\
+> Markdown is a fast and easy way to take notes, create content for a website, and produce print-ready documents.
 > \
 > &nbsp;
 
@@ -86,6 +91,8 @@ _italics_
 
 # Code Block
 
+    code block
+
 ```
 code block
 ```
@@ -112,7 +119,7 @@ npm install
 
 ---
 
-    horizontal line
+horizontal line
 
 ---
 
@@ -137,3 +144,5 @@ npm install
 - [x] Task 1
 - [x] Task 2
 - [ ] Task 3
+
+</samp>
