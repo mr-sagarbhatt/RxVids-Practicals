@@ -137,7 +137,7 @@ horizontal line
 
 # Image
 
-![markdown image](./download.jpeg)
+![markdown image](../download.jpeg)
 
 # Task Lists
 
