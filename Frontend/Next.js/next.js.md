@@ -70,3 +70,5 @@
 # Link Component
 
 > In Next.js, you use the Link Component from next/link to wrap the <a> tag. <Link> allows you to do client-side navigation to a different page in the application.
+> the Link component is similar to using <a> tags, but instead of <a href="…">, you use <Link href="…"> and put an <a> tag inside.
+> If you need to link to an external page outside the Next.js app, just use an <a> tag without Link
