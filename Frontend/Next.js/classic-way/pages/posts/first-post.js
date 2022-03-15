@@ -5,6 +5,7 @@ import Layout from "../../components/Layout/layout";
 import utilStyles from "../../styles/utils.module.scss";
 import { getSortedPostsData } from "../../lib/posts";
 
+// * to fetch necessary data
 export async function getServerSideProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -23,17 +24,19 @@ const FirstPost = ({ allPostsData }) => {
       <h1 className={utilStyles.heading2Xl}>First Post</h1>
       <Image
         src='/assets/images/download.jpeg'
-        className={utilStyles.borderCircle}
+        className={`${utilStyles.borderCircle}`}
         height={144}
         width={144}
         alt='post-1'
       />
-      <h2>
+      <h2 className='mt-8 text-xl'>
         <Link href='/'>
           <a>Back to home 🏠</a>
         </Link>
       </h2>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section
+        className={`${utilStyles.headingMd} ${utilStyles.padding1px} mt-8`}
+      >
         <h2 className={utilStyles.headingLg}>
           Blog using getServerSideProps()
         </h2>

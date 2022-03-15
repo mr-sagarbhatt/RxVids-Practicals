@@ -9,7 +9,9 @@ import Script from "next/script";
 import Layout from "../components/Layout/layout";
 import utilStyles from "../styles/utils.module.scss";
 import { getSortedPostsData } from "../lib/posts";
+import { useState } from "react";
 
+// * to fetch necessary data
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -20,8 +22,43 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  const [users, setUsers] = useState([]);
+  {
+    /* // * GET :: Fetch data from API */
+  }
+  const fetchData = async () => {
+    const response = await fetch("/api/user");
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
+    const users = await response.json();
+    return setUsers(users);
+  };
+
+  {
+    /* // * POST */
+  }
+  const postData = async () => {
+    const response = await fetch("/api/user", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id: 3,
+        firstName: "Beyoncé",
+        middleName: "Giselle",
+        lastName: "Knowles-Carter",
+        age: 40,
+      }),
+    });
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
+    const users = await response.json();
+    return setUsers(users);
+  };
+
   return (
-    <Layout>
+    <Layout className='h-screen'>
       {/* // * styled-jsx */}
       {/* scoped styles */}
       <style jsx>{`
@@ -61,19 +98,36 @@ export default function Home({ allPostsData }) {
       />
       <h1 className={utilStyles.heading2Xl}>Home Page 🏠</h1>
       <Image
-        src='/assets/images/profile.jpg'
+        src='/assets/images/download.jpeg'
         className={utilStyles.borderCircle}
         height={200}
         width={200}
         alt='profile'
       />
-      <h2>
+      <h2 className='flex flex-col gap-4 my-4'>
         <Link href='/posts/first-post/'>
-          <a>Go to first-post ➡️</a>
+          <a>Go to /posts/first-post/ ➡️</a>
+        </Link>
+        <Link href='/tailwind/tailwind/'>
+          <a>Go to tailwind/tailwind/ ➡️</a>
+        </Link>
+        <Link href='/posts/ssg-ssr'>
+          <a>Go to /posts/ssg-ssr/ ➡️</a>
+        </Link>
+        <Link href='/posts/pre-rendering'>
+          <a>Go to /posts/pre-rendering/ ➡️</a>
+        </Link>
+        <Link href='/api/hello/'>
+          <a>Go to /api/hello/ ➡️</a>
+        </Link>
+        <Link href='/api/user/'>
+          <a>GO to /api/user/ ➡️</a>
         </Link>
       </h2>
 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section
+        className={`${utilStyles.headingMd} ${utilStyles.padding1px} mt-10`}
+      >
         <h2 className={utilStyles.headingLg}>Blog using getStaticProps()</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
@@ -86,6 +140,55 @@ export default function Home({ allPostsData }) {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section className='mt-8'>
+        <button
+          className='p-3 text-white bg-black border rounded-lg'
+          onClick={postData}
+        >
+          Create Users
+        </button>
+
+        {/* // * GET :: Fetch data from API */}
+        <button
+          className='p-3 text-white bg-black border rounded-lg'
+          onClick={fetchData}
+        >
+          Fetch Users
+        </button>
+        <button
+          className='p-3 text-white bg-black border rounded-lg'
+          onClick={() => setUsers([])}
+        >
+          Clear Users
+        </button>
+        <div>
+          {users.length > 0 && (
+            <table className='m-4 text-center'>
+              <thead>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+              </thead>
+              <tbody>
+                {users.map((user) => {
+                  return (
+                    <tr key={user.id}>
+                      <td>{user.id}</td>
+                      <td>{user.firstName}</td>
+                      <td>{user.middleName}</td>
+                      <td>{user.lastName}</td>
+                      <td>{user.age}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          )}
+        </div>
       </section>
     </Layout>
   );
