@@ -190,6 +190,7 @@ export default function Home({ allPostsData }) {
           )}
         </div>
       </section>
+      <div className='mb-56'></div>
     </Layout>
   );
 }
