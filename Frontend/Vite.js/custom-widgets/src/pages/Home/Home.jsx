@@ -1,7 +1,9 @@
 const Home = () => {
   return (
     <>
-      <section>Project created using Vite, tailwind and React.</section>
+      <section className='text-center text-2xl text-teal-500 mt-4'>
+        Project created using Vite, tailwind and React.
+      </section>
     </>
   );
 };
